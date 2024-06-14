@@ -1,0 +1,18 @@
+ALTER TABLE `db_macedo_turismo`.`tbl_turistas` 
+ADD COLUMN `cpf` INT(11) NULL AFTER `nome`,
+ADD COLUMN `data_de_nascimento` VARCHAR(10) NULL AFTER `cpf`,
+ADD COLUMN `horario` VARCHAR(8) NULL AFTER `data_de_nascimento`,
+ADD COLUMN `rg` VARCHAR(13) NULL AFTER `horario`,
+ADD COLUMN `orgao_expedidor_rg` VARCHAR(6) NULL AFTER `rg`,
+ADD COLUMN `profissao` VARCHAR(30) NULL AFTER `orgao_expedidor_rg`,
+ADD COLUMN `estado_civil id_estado_civil` INT(11) NULL AFTER `profissao`,
+ADD COLUMN `endereco_tipo id_endereco_tipo` INT NULL AFTER `estado_civil id_estado_civil`,
+ADD COLUMN `endereco` VARCHAR(50) NULL AFTER `endereco_tipo id_endereco_tipo`,
+ADD COLUMN `endereco_numero` VARCHAR(7) NULL AFTER `endereco`,
+ADD COLUMN `endereco_complemento` VARCHAR(15) NULL AFTER `endereco_numero`,
+ADD COLUMN `endereco_referencia` TINYTEXT NULL AFTER `endereco_complemento`,
+ADD COLUMN `endereco_bairro` VARCHAR(20) NULL AFTER `endereco_referencia`,
+ADD COLUMN `endereco_id_cidade` INT(11) NULL AFTER `endereco_bairro`,
+ADD COLUMN `endereco_cep` VARCHAR(9) NULL AFTER `endereco_id_cidade`,
+ADD COLUMN `email` VARCHAR(50) NULL AFTER `endereco_cep`,
+ADD COLUMN `whatsapp` VARCHAR(17) NULL AFTER `email`;
